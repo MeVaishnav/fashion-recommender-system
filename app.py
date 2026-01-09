@@ -12,4 +12,6 @@ model=tensorflow.keras.Sequential([
     GlobalMaxPooling2D()
 ])
 
-print(model.summary())
+#print(model.summary())
+
+def extract_features(img_path,model):
