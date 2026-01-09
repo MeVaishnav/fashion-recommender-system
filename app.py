@@ -23,3 +23,6 @@ def extract_features(img_path,model):
     preprocessed_img=preprocess_input(expanded_img_array)
     result=model.predict(preprocessed_img).flatten()
     nomalized_result=result/norm(result)
+
+
+    return nomalized_result
