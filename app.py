@@ -6,7 +6,7 @@ from tensorflow.keras.applications.resnet50 import ResNet50,preprocess_input
 import numpy as np
 from numpy.linalg import norm
 import os
-
+import tqdm
 model=ResNet50(weights='imagenet',include_top=False,input_shape=(224,224,3))
 model.trainable=False
 
@@ -35,7 +35,7 @@ for file in os.listdir('images'):
 
 feature_list=[]
 
-for file in filenames:
+for file in tqdm(filenames):
     feature_list.append(extract_features(file,model))
 
 print(np.array(feature_list).shape)
