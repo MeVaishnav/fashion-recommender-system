@@ -28,4 +28,8 @@ def extract_features(img_path,model):
 
     return nomalized_result
 
-print(os.listdir('images'))
+filenames=[]
+
+for file in os.listdir('images'):
+    filenames.append(os.path.join('images',file))
+
