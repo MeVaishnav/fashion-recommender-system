@@ -33,3 +33,5 @@ filenames=[]
 for file in os.listdir('images'):
     filenames.append(os.path.join('images',file))
 
+print(len(filenames))
+print(filenames[0:5])
