@@ -5,6 +5,7 @@ from tensorflow.keras.utils import load_img, img_to_array
 from tensorflow.keras.applications.resnet50 import ResNet50,preprocess_input
 import numpy as np
 from numpy.linalg import norm
+import os
 
 model=ResNet50(weights='imagenet',include_top=False,input_shape=(224,224,3))
 model.trainable=False
@@ -26,3 +27,5 @@ def extract_features(img_path,model):
 
 
     return nomalized_result
+
+print(os.listdir('images'))
