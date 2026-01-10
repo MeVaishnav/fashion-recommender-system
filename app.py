@@ -37,3 +37,5 @@ feature_list=[]
 
 for file in filenames:
     feature_list.append(extract_features(file,model))
+
+print(np.array(feature_list).shape)
